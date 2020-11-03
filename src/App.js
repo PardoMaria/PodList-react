@@ -4,8 +4,10 @@ import PodcastCard from './components/Podcast/PodcastCard';
 import NavBar from './components/NavBar/NavBar'
 import { Redirect, Route, Switch } from 'react-router-dom';
 import SearchPodcast from './components/Podcast/SearchPodcast';
-import Login from './components/login/Login'
-import Favs from './components/Favs/Favs';
+import Login from './components/Login/Login'
+import Lists from './components/Lists/Lists';
+import OneList from './components/Lists/OneList';
+
 
 function App(){
 
@@ -29,8 +31,11 @@ function App(){
         <NavBar user={user} logOut={loggedOut}/>
         <SearchPodcast />
         <Switch>
+        
         <Route path="/login" render={(props) => <Login {...props} user={user} logIn={loggedIn} />} />
-        <Route path="/myfavs" render={(props) => <Favs {...props} user={user} logIn={loggedIn} />}/>
+        {/* <Route path="/myfavs" render={(props) => <Favs {...props} user={user} logIn={loggedIn} />}/> */}
+        <Route path="/lists" render={(props) => <Lists {...props} user={user} logIn={loggedIn} />}/>
+        <Route path="/list/:id" render={(props) => <OneList {...props} user={user} logIn={loggedIn} />}/>
         <Redirect to="/"/>
       </Switch>
 

@@ -20,21 +20,29 @@ export const login = ( email, password ) => http.post('/login', { email, passwor
 
 export const logout = () => http.post('/logout')
 
-
 export const getPodcastsFromSpotify = ({ search }) => {
   return http.get(`/podcast/${search}`)
 }
 
-export const createPodcast = ({ name, description }) => {
-  return http.post('/podcast/new', { name, description })
-}
-export const addFav = (likeId, body) => {
-  console.log("holaaddfav")
-  console.log(likeId)
-  return http.post(`/podcast/${likeId}/add`, body)
+export const addToList = (listId, podcast) => {
+  
+  return http.post(`/list/${listId}/add`, podcast)
   // .then((res) => res.data);
 }
 
-export const getLikes = () => {
-  return http.get('/myfavs')
+export const showLists = () => {
+  return http.get('/lists')
 }
+
+export const showOneList = (listId) => {
+  return http.get(`/lists/${listId}`)
+}
+
+
+
+// export const createList = ({ name }) => {
+//   return http.post('/list/new', { name })
+// }
+            // export const createPodcast = ({ name, description }) => {
+            //   return http.post('/podcast/new', { name, description })
+            // }

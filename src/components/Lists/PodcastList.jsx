@@ -1,7 +1,6 @@
 import React from 'react';
-import SelectList from '../SelectList/SelectList';
 
-const PodcastCard = ({ podcast, lists }) => {
+const PodcastList = ({ podcast }) => {
   
     return (
         <div>
@@ -15,8 +14,6 @@ const PodcastCard = ({ podcast, lists }) => {
                  <h5 className="card-title">{podcast.name}</h5>
                   <p className="card-text">{podcast.description}</p>
                   <p className="card-text"><small className="text-muted"><b>Created by</b> {podcast.publisher}</small></p>
-                  
-                  <SelectList lists={lists} podcast={podcast}/>
                 
                 </div>
               </div>
@@ -26,4 +23,4 @@ const PodcastCard = ({ podcast, lists }) => {
     );
 };
 
-export default PodcastCard;
+export default PodcastList;

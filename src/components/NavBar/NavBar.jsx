@@ -37,8 +37,8 @@ export default function NavBar(props) {
           {u ? (
             <div>
               <p>Hi, {u.email.split('@')[0]}!</p>
-              <Link to="/myfavs">Favs</Link>
-              <Link to="/mylists">Favs</Link>
+              {/* <Link to="/myfavs">Favs</Link> */}
+              <Link to="/lists">Listas</Link>
               <Button color="inherit" onClick={props.logOut}>Log Out</Button>
             </div>
           ) : (

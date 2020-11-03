@@ -1,0 +1,14 @@
+.home-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+}
+.home-search {
+    margin-top: 30px;
+    color: white;
+    background-color: palevioletred;
+    border: 3px solid  palevioletred;
+}
