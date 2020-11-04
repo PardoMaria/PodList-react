@@ -38,6 +38,9 @@ export const showOneList = (listId) => {
   return http.get(`/lists/${listId}`)
 }
 
+export const editList = (listId, body) => {
+  return http.patch(`/lists/${listId}`, body)
+}
 
 
 // export const createList = ({ name }) => {

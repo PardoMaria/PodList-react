@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import {getPodcastsFromSpotify} from './services/Api'
-import PodcastCard from './components/Podcast/PodcastCard';
 import NavBar from './components/NavBar/NavBar'
-import { Redirect, Route, Switch } from 'react-router-dom';
-import SearchPodcast from './components/Podcast/SearchPodcast';
+import { Route, Switch } from 'react-router-dom';
 import Login from './components/Login/Login'
 import Lists from './components/Lists/Lists';
 import OneList from './components/Lists/OneList';
+import EditListName from './components/Lists/EditListName';
+import Home from './components/Home/Home';
 
 
 function App(){
@@ -25,18 +24,18 @@ function App(){
   }
 
     
-
     return (
         <div>
         <NavBar user={user} logOut={loggedOut}/>
-        <SearchPodcast />
+
         <Switch>
         
         <Route path="/login" render={(props) => <Login {...props} user={user} logIn={loggedIn} />} />
-        {/* <Route path="/myfavs" render={(props) => <Favs {...props} user={user} logIn={loggedIn} />}/> */}
         <Route path="/lists" render={(props) => <Lists {...props} user={user} logIn={loggedIn} />}/>
+        <Route path="/list/edit/:id" render={(props) => <EditListName {...props} user={user} logIn={loggedIn} />}/>
         <Route path="/list/:id" render={(props) => <OneList {...props} user={user} logIn={loggedIn} />}/>
-        <Redirect to="/"/>
+        <Route path="/" render={(props) => <Home {...props} user={user} logIn={loggedIn} />} />
+
       </Switch>
 
         </div>

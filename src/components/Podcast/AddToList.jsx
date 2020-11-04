@@ -1,5 +1,4 @@
 import React from 'react';
-import "./PodcastLike.css"
 import { addToList } from '../../services/Api';
 
 
@@ -11,7 +10,7 @@ export function AddToList({listId, podcast}) {
       window.alert(`${res}Guardado en la lista!`)
     })
     .catch(e => console.log(e))
-    //TODO: HANDLE RESPONSE-hecho?
+    //TODO: HANDLE RESPONSE-hecho pero MEJORAR
   }
 
     return <button onClick={addtolist}>Add to list</button>
