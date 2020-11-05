@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 import { editList } from '../../services/Api';
 import { showOneList } from '../../services/Api';
 
@@ -7,9 +7,9 @@ import { showOneList } from '../../services/Api';
 export default function EditListName() {
     const [list, setList] = useState();
     const {id} = useParams()
+    const [redirect, setRedirect] = useState(false);
   
     const getOneList = () => {
-        console.log("pepe2");
         console.log(id);
         showOneList(id)
             .then((res) => {
@@ -24,7 +24,6 @@ export default function EditListName() {
     },[])
 
     const [body, setBody] = useState(null);
-    // const [lists, setLists] = useState([]);
     const handleChange = (val, name) => {
     setBody({
       ...body,
@@ -38,14 +37,14 @@ export default function EditListName() {
     editList(list.id, body)
       .then((editedNameList) => {
         console.log("Edited name list", editedNameList);
-        // TODO: do something to redirect to /list/:listid
+        setRedirect(true);
       })
       .catch((e) => console.log(e));
   };
 
-//   if (nameModified) {
-//       return <Redirect to="l...." />
-//   }
+  if (redirect) {
+      return <Redirect to="/lists" />
+  }
 
   return (
       <div style={{border:"1px solid red"}}>

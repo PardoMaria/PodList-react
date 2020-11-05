@@ -20,6 +20,7 @@ const OneList = () => {
     },[])
     return (
         <div>
+            <h2>{list.name}</h2>
         {list && 
             list.podcasts.map((podcast) => (
           <PodcastList podcast={podcast}/>
