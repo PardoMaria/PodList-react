@@ -1,5 +1,6 @@
 import React from "react";
-// import '../Podcast/SearchPodcast.css'
+import '../Podcast/SearchPodcast.css'
+import '../Podcast/PodcastCard.css'
 import { useState } from "react";
 import PodcastCard from "./PodcastCard";
 import { getPodcast, getPodcastsFromSpotify } from "../../services/Api";
@@ -32,7 +33,10 @@ const SearchPodcast = () => {
         <button className="button" onClick={() => getPodcast()}>Busca</button>
       </div>
       {podcasts.map((podcast, i) => {
-        return <PodcastCard key={i} podcast={podcast} lists={lists} />;
+        return (
+          <div className="card-container">
+        <PodcastCard key={i} podcast={podcast} lists={lists} />
+        </div>)
       })}
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { addToList } from '../../services/Api';
 import { Redirect } from 'react-router-dom';
-
+import '../Podcast/AddToList.css'
 
 
 export function AddToList({listId, podcast}) {
@@ -18,6 +18,6 @@ export function AddToList({listId, podcast}) {
   if (redirect) {
     return <Redirect to={`/list/${listId}`} />
 }
-    return <button onClick={addtolist}>Add to list</button>
+    return <button className="button-list" onClick={addtolist}>Add to list</button>
 }
    

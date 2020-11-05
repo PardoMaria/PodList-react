@@ -3,3 +3,10 @@
 body {
     font-family: 'Barlow', sans-serif;
 }
+
+:root {
+    --secondary-color: #b190f0;
+    --accent-color: lightcoral;
+    --main-color: #707070;
+    --light-color: white;
+}

@@ -1,12 +1,12 @@
 import React from 'react';
-import './PodcastCard.css'
+import '../Podcast/PodcastCard.css';
 import SelectList from '../SelectList/SelectList';
 
 const PodcastCard = ({ podcast, lists }) => {
   
     return (
-        <div>
-            <div className="card mb-3" style={{maxWidth: "540px"}}>
+        <div className="podcast-list">
+            <div className="card" style={{maxWidth: "540px"}}>
             <div className="row no-gutters">
               <div className="col-md-4">
                 <img src={podcast.images[0].url} className="card-img" alt="..."/>
