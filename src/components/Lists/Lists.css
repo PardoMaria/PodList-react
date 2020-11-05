@@ -1,0 +1,29 @@
+.list-archive {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.list-card {
+    border: 2px dashed var(--secondary-color);
+    width: 200px;
+    height: 200px;
+    margin: 25px 20px 0 0;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.list-card:hover {
+    border: 2px dashed var(--accent-color);
+
+}
+
+.list-title {
+    margin-top: 50px;
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+
+a {
+    color: var(--main-color)
+}

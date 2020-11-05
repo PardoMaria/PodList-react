@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { editList } from '../../services/Api'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import EditListName from './EditListName';
+import '../Lists/Lists.css'
 
 
 export default function ListName({list}) {
@@ -25,14 +26,14 @@ export default function ListName({list}) {
       .catch((e) => console.log(e));
   };
   return (
-      <div>
-        <h2 value={listName} variant="h5" component="h2">{list.name}</h2>
+      <div className="list-card">
+        <h2 className="list-title" value={listName} variant="h5" component="h2">{list.name}</h2>
   
       <div>
-        <Link to={`/list/${list.id}`}>Ver lista</Link>
+        <Link className="list-link" to={`/list/${list.id}`}>Ver lista</Link>
       </div>
       <div>
-        <Link to={`/list/edit/${list.id}`}>Editar</Link>
+        <Link className="list-link" to={`/list/edit/${list.id}`}>Editar</Link>
       </div>
     </div>
   );

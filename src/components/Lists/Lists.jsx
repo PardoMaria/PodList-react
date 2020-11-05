@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { showLists } from '../../services/Api';
  import ListName from '../Lists/ListName';
+import '../Lists/Lists.css'
 
 const Lists = () => {
     const [lists, setLists] = useState([]);
@@ -17,7 +18,7 @@ const Lists = () => {
         getLists()
     },[])
     return (
-        <div>
+        <div className="list-archive">
         {lists.length && 
             lists.map((list) => (
           <ListName list={list}/>

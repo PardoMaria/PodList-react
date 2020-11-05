@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Redirect } from 'react-router-dom';
 import { editList } from '../../services/Api';
 import { showOneList } from '../../services/Api';
+import '../Home/Home.css'
 
 
 export default function EditListName() {
@@ -47,7 +48,7 @@ export default function EditListName() {
   }
 
   return (
-      <div style={{border:"1px solid red"}}>
+      <div>
             {list && (<div>
               <form>
                 <div className="form-group">
@@ -68,7 +69,7 @@ export default function EditListName() {
               </form>
               <button
                 type="button"
-                className="btn btn-primary"
+                className="button save"
                 onClick={onSubmit}
               >
                 Guardar nombre

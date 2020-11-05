@@ -1,0 +1,10 @@
+.list-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.list-name {
+    color: var(--secondary-color);
+    font-size: 80px;
+}
