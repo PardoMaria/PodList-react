@@ -1,0 +1,56 @@
+
+:root {
+    --secondary-color: #b190f0;
+    --accent-color: lightcoral;
+    --main-color: #707070;
+    --light-color: white;
+}  
+
+.main {
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 50px;
+    color: var(--secondary-color);
+}
+
+.home-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin-top: 25px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+
+.button {
+    color: var(--light-color);
+    background-color: var(--secondary-color);
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: none;
+
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+}
+
+.button:active {
+    transform: translateY(4px);
+  }

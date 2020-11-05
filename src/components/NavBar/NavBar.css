@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 15px 0 15px;
+}
+
+.navbar {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.navbar-links {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding-top: 15px;
+}
+
+.username {
+    padding-top: 15px;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: bold;
+}

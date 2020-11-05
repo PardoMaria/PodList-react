@@ -4,7 +4,7 @@ import SearchPodcast from '../Podcast/SearchPodcast'
 
 const Home = () => {
     return (
-        <div className="background">
+        <div className="main">
             <h1 className="main-title">PodList</h1>
             <SearchPodcast />
         </div>

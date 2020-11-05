@@ -1,4 +1,5 @@
 import React from 'react';
+import './PodcastCard.css'
 import SelectList from '../SelectList/SelectList';
 
 const PodcastCard = ({ podcast, lists }) => {

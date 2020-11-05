@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import NavBar from './components/NavBar/NavBar'
 import { Route, Switch } from 'react-router-dom';
-import Login from './components/Login/Login'
+import Login from './components/login/Login'
 import Lists from './components/Lists/Lists';
 import OneList from './components/Lists/OneList';
 import EditListName from './components/Lists/EditListName';
 import Home from './components/Home/Home';
-
+import './App.css'
 
 function App(){
 

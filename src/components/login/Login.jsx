@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import InputWithLabel from '../Login/input-with-label/InputWithLabel'
+import InputWithLabel from '../login/input-with-label/InputWithLabel'
 import {login} from '../../services/Api'
 import {Redirect} from 'react-router-dom'
 
