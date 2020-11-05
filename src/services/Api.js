@@ -20,6 +20,10 @@ export const login = ( email, password ) => http.post('/login', { email, passwor
 
 export const logout = () => http.post('/logout')
 
+// export const editUser = (userId, body) => {
+//   return http.patch(`/lists/${userId}`, body)
+// }
+
 export const getPodcastsFromSpotify = ({ search }) => {
   return http.get(`/podcast/${search}`)
 }
@@ -27,7 +31,6 @@ export const getPodcastsFromSpotify = ({ search }) => {
 export const addToList = (listId, podcast) => {
   
   return http.post(`/list/${listId}/add`, podcast)
-  // .then((res) => res.data);
 }
 
 export const showLists = () => {
@@ -42,10 +45,6 @@ export const editList = (listId, body) => {
   return http.patch(`/lists/${listId}`, body)
 }
 
-
 // export const createList = ({ name }) => {
 //   return http.post('/list/new', { name })
 // }
-            // export const createPodcast = ({ name, description }) => {
-            //   return http.post('/podcast/new', { name, description })
-            // }

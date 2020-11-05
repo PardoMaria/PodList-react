@@ -23,12 +23,13 @@ const SearchPodcast = () => {
     <div>
       <div className="home-form home-search">
         <input
+          className=""
           type="text"
           value={search}
           placeholder="Busca"
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button onClick={() => getPodcast()}>Busca</button>
+        <button className="btn btn-primary" onClick={() => getPodcast()}>Busca</button>
       </div>
       {podcasts.map((podcast, i) => {
         return <PodcastCard key={i} podcast={podcast} lists={lists} />;

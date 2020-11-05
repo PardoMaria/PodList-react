@@ -13,13 +13,15 @@ export default function NavBar(props) {
             <div>
               <p>Hi, {u.username.split(" ")[0]}!</p>
               <Link to="/lists">Listas</Link>
-              <button color="inherit" onClick={props.logOut}>
+              <br/>
+              <Link to="/">Home</Link>
+              <button onClick={props.logOut}>
                 Log Out
               </button>
             </div>
           ) : (
             <div>
-              <Link to="/login" color="inherit" onClick={props.logIn}>
+              <Link to="/login"  onClick={props.logIn}>
                 Login
               </Link>
             </div>

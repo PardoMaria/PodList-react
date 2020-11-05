@@ -6,6 +6,7 @@ import PodcastList from '../Lists/PodcastList';
 const OneList = () => {
     const [list, setList] = useState();
     const {id} = useParams()
+ 
   
     const getOneList = () => {
         showOneList(id)
@@ -15,12 +16,16 @@ const OneList = () => {
             })
             .catch((e => console.log(e)))
     }
+
     useEffect(()=> {
         getOneList()
     },[])
+    console.log(id)
+    console.log(list)
+
     return (
         <div>
-            <h2>{list.name}</h2>
+        <h2>{list?.name}</h2>
         {list && 
             list.podcasts.map((podcast) => (
           <PodcastList podcast={podcast}/>
