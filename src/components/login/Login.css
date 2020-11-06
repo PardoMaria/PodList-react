@@ -1,0 +1,37 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin-top: 25px;
+}
+
+
+.button-login {
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    margin: 10px 10px 0 0;
+    color: var(--secondary-color);
+    background-color: var(--light-color);
+    border: none;
+    font-weight: bold;
+}
+
+.button-login:hover {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+}
+
+.button-login:active {
+    transform: translateY(4px);
+  }

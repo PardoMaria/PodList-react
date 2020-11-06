@@ -11,6 +11,23 @@
     color: var(--secondary-color);
 }
 
+.highlight {
+    background-color: #fff2ac;
+    background-image: linear-gradient(to right, #fae57d 0%, #fff2ac 100%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-left: 3px;
+    line-height: 1;
+    padding-bottom: 15px;
+}
+
+.sub-title {
+    font-size: 20px;
+    color: var(--main-color);
+    padding-top: 20px;
+}
+
 .home-form {
     display: flex;
     flex-direction: column;

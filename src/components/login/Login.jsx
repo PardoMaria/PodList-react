@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import InputWithLabel from '../login/input-with-label/InputWithLabel'
 import {login} from '../../services/Api'
 import {Redirect} from 'react-router-dom'
+import '../login/Login.css'
 
 export default function Login({user, logIn}) {
     const [email, setEmail] = useState('')
@@ -23,6 +24,7 @@ if (user) {
 }
     return (
         <>
+        <div className="main">
             <div className="login">
                 {error && <p><strong>Oops</strong> {error}</p>}
                 <form onSubmit={onSubmit}>
@@ -36,9 +38,10 @@ if (user) {
                         label="password"
                         type="password"
                         onChange={(e) => setPassword(e.target.value)} />
-                    <button type="submit">Log In</button>
+                    <button className="button-login" type="submit">Log In</button>
                 </form>
             </div>
+        </div>
         </>
     )
 }

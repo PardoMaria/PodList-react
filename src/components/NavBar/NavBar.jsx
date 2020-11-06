@@ -10,14 +10,14 @@ export default function NavBar(props) {
       {u ? (
         <>
         <div>
-        <p className="username">Hi, {u.username.split(" ")[0]}!</p>
+        <p className="username">Hola, {u.username.split(" ")[0]} {'\u2728'}!</p>
         </div>
         <nav className="navbar">
           <Link to="/lists">
-            <p className="navbar-links">Listas</p>
+            <p className="navbar-links">💖 Listas</p>
           </Link>
           <Link to="/">
-            <p className="navbar-links">Home</p>
+            <p className="navbar-links">🏠 Home</p>
           </Link>
           <button className="button" onClick={props.logOut}>
             Log Out
@@ -25,7 +25,7 @@ export default function NavBar(props) {
         </nav>
         </>
       ) : (
-        <div className="button">
+        <div>
           <Link to="/login" onClick={props.logIn}>
             <p className="navbar-links">Login</p>
           </Link>
